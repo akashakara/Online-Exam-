@@ -41,18 +41,24 @@
 <button onclick="submit()">submit</button><br>
 
 <script>
-  var timeleft = 90;
+  var timeleft = 21;
   var downloadTimer = setInterval(function () {
-    document.getElementById("countdown").innerHTML = `${timeleft} seconds left`;
     timeleft -= 1;
+    document.getElementById("countdown").innerHTML = `${timeleft} seconds left`;
+  //  if(timeleft==10){
+  //    prompt("half time left!")
+  //  }
     if (timeleft <= 0) {
       clearInterval(downloadTimer);
       document.getElementById("countdown").innerHTML = "The time has ended!";
+      alert("Answers Submitted!!!")
+        window.location="thanks.html";
     }
   }, 1000);
   function submit() {
-	alert("Answers Submitted!!!")
-  
+  clearInterval(downloadTimer);
+  alert("Answers Submitted!!!")
+        window.location="thanks.html";
 }
 
 
