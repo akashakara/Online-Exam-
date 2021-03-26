@@ -1,0 +1,39 @@
+<Html>
+    <head> 
+    <title>
+    Quiz
+    </title>
+    </head>
+<body>
+<div id="countdown" > </div>
+<p>Q:1 What is the capital of India?</p>
+<input type="radio" name="male"/> Mumbai <br>
+<input type="radio" name="male"/> Delhi <br>
+<input type="radio" name="male"/> Kolkata <br>
+<input type="radio" name="male"/> Chennai <br>
+<button onclick="submit()">submit</button>
+
+
+<script>
+  var timeleft = 90;
+  var downloadTimer = setInterval(function () {
+    document.getElementById("countdown").innerHTML = `${timeleft} seconds left`;
+    timeleft -= 1;
+    if (timeleft <= 0) {
+      clearInterval(downloadTimer);
+      document.getElementById("countdown").innerHTML = "The time has ended!";
+    }
+  }, 1000);
+  function submit() {
+	alert("Answers Submitted!!!")
+  
+}
+
+
+</script>
+
+
+</script>
+</body>
+
+</html>
